@@ -30,14 +30,14 @@ public class AnimalWithParamsTest {
     }
 
     @Before
-    public void setup(){
+    public void setUp(){
         animal = new Animal();
     }
 
     @Test
-    public void getFood() throws Exception {
+    public void getFoodTest() throws Exception {
         List<String> expectedResult = animal.getFood(animalKind);
-        Assert.assertEquals("Список еды не совпадает с ожидаемым",expectedResult, animalsFood);
+        Assert.assertEquals(expectedResult, animalsFood);
     }
 
 }
